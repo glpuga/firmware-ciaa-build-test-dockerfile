@@ -7,13 +7,6 @@ RUN apt-get install -y --no-install-recommends build-essential curl gdb git php-
 
 WORKDIR /root
 
-RUN git clone --recursive https://github.com/ciaa/Firmware.git \
-    && cd Firmware \
-    && cd modules/rtos && git checkout master
-
-COPY files/Makefile.mine /root/Firmware
-COPY files/entrypoint.sh /root
-
-WORKDIR /root/Firmware
+COPY files/* ./
 
 ENTRYPOINT ["/root/entrypoint.sh"]
