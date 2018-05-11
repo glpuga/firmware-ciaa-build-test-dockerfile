@@ -2,9 +2,9 @@
 
 git clone --recursive https://github.com/ciaa/Firmware.git
 cd Firmware
-#cd modules/rtos
-#git checkout master
-#cd ../..
+cd modules/rtos
+git checkout master
+cd ../..
 
 cp ../Makefile.mine .
 
